@@ -1,0 +1,3069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRU Raipur | World-Class University</title>
+
+    <!-- ========== META TAGS ========== -->
+    <meta name="description" content="Shri Rawatpura Sarkar University - NAAC A++ University with 95% placements">
+    <meta name="keywords" content="SRU, University, Engineering, MBA, Medical, Raipur">
+    <meta name="author" content="SRU University">
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" type="image/x-icon" href="#">
+
+    <!-- ========== GOOGLE FONTS ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ========== FONT AWESOME ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ========== BOOTSTRAP 5 ========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ========== ANIMATE CSS ========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- ========== CUSTOM CSS ========== -->
+    <style>
+        :root {
+            --primary: #0d47a1;
+            --secondary: #1565c0;
+            --accent: #2196f3;
+            --gold: #ffb300;
+            --dark: #1a237e;
+            --light: #bbdefb;
+            --success: #00c853;
+            --gradient-blue: linear-gradient(135deg, #0d47a1 0%, #2196f3 100%);
+            --gradient-gold: linear-gradient(135deg, #ffb300 0%, #ff8f00 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+            --bg-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            color: #333;
+            background: var(--bg-color);
+            transition: background-color 0.3s ease;
+            padding-top: 80px;
+            /* Fixed header ke liye space */
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        /* ========== PRELOADER ========== */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader-content {
+            text-align: center;
+            color: white;
+        }
+
+        .preloader-logo {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .preloader-logo span {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .preloader-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ffffff, #ffb300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .loading-bar {
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #ffb300, #ff8f00);
+            animation: loading 4s ease-in-out forwards;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* ========== TOP BAR ========== */
+        .top-bar {
+            background: var(--dark);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .top-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .top-link {
+            color: #bbdefb;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s;
+        }
+
+        .top-link:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ========== LANGUAGE DROPDOWN ========== */
+        .language-container {
+            position: relative;
+        }
+
+        .language-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .language-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            padding: 15px;
+            z-index: 1000;
+            display: none;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .language-dropdown.show {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .language-option {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .language-option:hover {
+            background: #f0f7ff;
+            color: var(--primary);
+            border-left-color: var(--accent);
+            padding-left: 20px;
+        }
+
+        /* ========== MAIN HEADER ========== */
+        .main-header {
+            background: white;
+            padding: 10px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 40px;
+            /* Top bar ke height ke hisaab se adjust */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            transition: all 0.3s;
+        }
+
+        .main-header.scrolled {
+            padding: 8px 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 900;
+            font-size: 1.5rem;
+            transition: transform 0.5s;
+        }
+
+        .logo:hover {
+            transform: rotateY(180deg);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            color: #666;
+            font-size: 0.8rem;
+            margin: 0;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 5px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: rgba(13, 71, 161, 0.05);
+        }
+
+        .nav-link.active {
+            color: white;
+            background: var(--gradient-blue);
+            box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        /* ========== MEGA MENU ========== */
+        .mega-dropdown {
+            position: static !important;
+        }
+
+        .mega-menu {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow-lg);
+            padding: 25px;
+            display: none;
+            z-index: 99;
+            border-top: 3px solid var(--accent);
+            top: 100%;
+            margin-top: 10px;
+        }
+
+        .mega-menu.show {
+            display: block;
+            animation: slideDown 0.3s;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mega-column h5 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--gold);
+            font-size: 1rem;
+        }
+
+        .mega-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mega-links li {
+            margin-bottom: 8px;
+        }
+
+        .mega-links a {
+            color: #555;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .mega-links a:hover {
+            color: var(--primary);
+            background: #f0f7ff;
+            transform: translateX(5px);
+        }
+
+        /* ========== SETTINGS BUTTON ========== */
+        .settings-container {
+            position: relative;
+        }
+
+        .settings-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gradient-blue);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+        }
+
+        .settings-btn:hover {
+            background: var(--secondary);
+            transform: rotate(30deg) scale(1.1);
+        }
+
+        .settings-dropdown {
+            position: absolute;
+            top: 120%;
+            right: 0;
+            width: 250px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            padding: 15px;
+            z-index: 1000;
+            display: none;
+            border-top: 3px solid var(--accent);
+        }
+
+        .settings-dropdown.show {
+            display: block;
+            animation: slideDown 0.3s;
+        }
+
+        .settings-dropdown h5 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .settings-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .settings-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .settings-option:hover {
+            background: var(--gradient-blue);
+            color: white;
+            transform: translateX(5px);
+            border-color: transparent;
+        }
+
+        .settings-option i {
+            font-size: 1rem;
+            width: 25px;
+            text-align: center;
+        }
+
+        /* ========== RESOURCES MEGA MENU ========== */
+        .resources-mega-menu {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow-lg);
+            padding: 25px;
+            display: none;
+            z-index: 99;
+            border-top: 3px solid var(--gold);
+            top: 100%;
+            margin-top: 10px;
+        }
+
+        .resources-mega-menu.show {
+            display: block;
+            animation: slideDown 0.3s;
+        }
+
+        /* ========== HEADER ACTIONS ========== */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .apply-btn {
+            background: var(--gradient-gold);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 179, 0, 0.3);
+            font-size: 0.9rem;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.4);
+        }
+
+        /* ========== PAGES CONTAINER ========== */
+        .pages-container {
+            position: relative;
+            min-height: calc(100vh - 400px);
+            margin-top: 0;
+            /* Header ke niche se start */
+        }
+
+        .page {
+            display: none;
+            animation: slideIn 0.5s ease-out;
+            padding: 20px 0 0 0;
+            /* Top padding kam ki */
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero-section {
+            background: linear-gradient(rgba(13, 71, 161, 0.85), rgba(26, 35, 126, 0.9)),
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0 50px;
+            /* Space kam ki */
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+            /* Header ke exactly niche */
+        }
+
+        .hero-shape {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 179, 0, 0.1);
+            border-radius: 50%;
+            filter: blur(80px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .hero-title span {
+            color: #ffb300;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            color: #e3f2fd;
+            max-width: 600px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary-hero {
+            background: var(--gradient-gold);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 179, 0, 0.3);
+        }
+
+        .btn-primary-hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 179, 0, 0.4);
+        }
+
+        .btn-secondary-hero {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary-hero:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* ========== STATS ========== */
+        .stats-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ffb300;
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-text {
+            color: #e3f2fd;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* ========== FEATURES ========== */
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .features-section {
+            padding: 60px 0;
+            /* Space kam ki */
+            background: white;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: var(--shadow);
+            transition: all 0.4s;
+            border: 1px solid #f0f0f0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-blue);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-card.active {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(13, 71, 161, 0.2);
+            border-color: var(--accent);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .feature-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ddd;
+            text-align: left;
+        }
+
+        .feature-details.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .feature-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-details li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .feature-details li i {
+            color: var(--success);
+        }
+
+        /* ========== SIDE PANEL ========== */
+        .side-panel {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 100%;
+            background: white;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: right 0.4s ease;
+            overflow-y: auto;
+            padding: 25px;
+        }
+
+        .side-panel.open {
+            right: 0;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .panel-header h3 {
+            color: var(--primary);
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .close-panel {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            color: #666;
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-panel:hover {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .theme-options h4 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1rem;
+        }
+
+        .color-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .color-option {
+            width: 55px;
+            height: 55px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.05);
+        }
+
+        .color-option.active {
+            border-color: #333;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-btn {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: none;
+            border-radius: 8px;
+            background: #f0f0f0;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .theme-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .theme-btn.primary {
+            background: var(--gradient-blue);
+            color: white;
+        }
+
+        .theme-btn.warning {
+            background: var(--gradient-gold);
+            color: white;
+        }
+
+        /* ========== PAGE CONTENT ========== */
+        .page-hero {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 60px 0;
+            /* Space kam ki */
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .page-content {
+            padding: 30px 0;
+            /* Space kam ki */
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .program-list li {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .company-logo {
+            height: 70px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            padding: 12px;
+            transition: all 0.3s;
+        }
+
+        .company-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ========== CONTACT PAGE ========== */
+        .contact-form {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+        }
+
+        .submit-btn {
+            background: var(--gradient-blue);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* ========== FOOTER ========== */
+        .main-footer {
+            background: var(--dark);
+            color: white;
+            padding-top: 60px;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .footer-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 50px;
+        }
+
+        .footer-wave .shape-fill {
+            fill: #ffffff;
+        }
+
+        .footer-logo {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .footer-about {
+            color: #bbdefb;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .footer-heading {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbdefb;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 35px;
+            height: 35px;
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        .copyright {
+            color: #bbdefb;
+            font-size: 0.9rem;
+        }
+
+        .footer-badges {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .badge {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        /* ========== CHAT BOAT ========== */
+        .chat-boat {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+        }
+
+        .chat-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.4);
+            transition: all 0.3s;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .chat-btn:hover {
+            transform: scale(1.1) rotate(15deg);
+        }
+
+        .chat-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 320px;
+            height: 450px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            display: none;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .chat-header {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-chat {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-body {
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+
+        .message {
+            margin-bottom: 12px;
+        }
+
+        .bot-message {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 15px 15px 15px 5px;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            max-width: 80%;
+            font-size: 0.9rem;
+        }
+
+        .user-message {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 15px 15px 5px 15px;
+            margin-left: auto;
+            max-width: 80%;
+            font-size: 0.9rem;
+        }
+
+        /* ========== CHAT INPUT ========== */
+        .chat-input-container {
+            padding: 12px;
+            border-top: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        #chatInput {
+            flex: 1;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            min-height: 40px;
+            resize: none;
+            outline: none;
+        }
+
+        #chatInput:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+        }
+
+        .send-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-blue);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .send-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            body {
+                padding-top: 70px;
+                /* Mobile me kam space */
+            }
+
+            .top-bar {
+                padding: 8px 0;
+            }
+
+            .main-header {
+                top: 32px;
+                padding: 8px 0;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block !important;
+            }
+
+            .side-panel {
+                width: 300px;
+                right: -300px;
+            }
+
+            .color-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .company-grid {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            }
+
+            .hero-section {
+                padding: 50px 0 40px;
+            }
+
+            .features-section {
+                padding: 50px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 65px;
+            }
+
+            .top-bar {
+                display: none;
+                /* Mobile me top bar hide */
+            }
+
+            .main-header {
+                top: 0;
+                padding: 8px 0;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .chat-window {
+                width: 300px;
+                right: -15px;
+            }
+
+            .stats-container .row>div {
+                margin-bottom: 15px;
+            }
+
+            .settings-dropdown {
+                width: 250px;
+            }
+
+            .side-panel {
+                width: 280px;
+                right: -280px;
+                padding: 20px;
+            }
+
+            .page-hero {
+                padding: 50px 0;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .company-grid {
+                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .hero-section {
+                padding: 40px 0 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding-top: 60px;
+            }
+
+            .top-links {
+                gap: 8px;
+            }
+
+            .top-link span {
+                display: none;
+            }
+
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+
+            .logo-text p {
+                font-size: 0.7rem;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .header-actions {
+                gap: 8px;
+            }
+
+            .apply-btn {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+
+            .settings-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .mobile-menu-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+
+            .company-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 0.9rem;
+            }
+
+            .hero-section {
+                padding: 30px 0 25px;
+            }
+
+            .features-section {
+                padding: 40px 0;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+        }
+
+        /* ========== MOBILE MENU BUTTON ========== */
+        .mobile-menu-btn {
+            display: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            background: var(--gradient-blue);
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        /* ========== THEME COLORS ========== */
+        .theme-light-blue {
+            background: #e3f2fd;
+        }
+
+        .theme-light-gray {
+            background: #f5f5f5;
+        }
+
+        .theme-light-green {
+            background: #e8f5e9;
+        }
+
+        .theme-light-yellow {
+            background: #fffde7;
+        }
+
+        .theme-light-pink {
+            background: #fce4ec;
+        }
+
+        .theme-dark-blue {
+            background: #0d1b2a;
+        }
+
+        .theme-dark-gray {
+            background: #1a1a1a;
+        }
+
+        .theme-dark-green {
+            background: #1b4332;
+        }
+
+        .theme-warm {
+            background: #fff3e0;
+        }
+
+        .theme-cool {
+            background: #e0f7fa;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========== PRELOADER ========== -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span>SRU</span>
+            </div>
+            <div class="preloader-text">Shri Rawatpura Sarkar University Raipur</div>
+            <p style="color: #bbdefb; margin-bottom: 20px;">University Of Dreams....</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TOP BAR ========== -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="top-links">
+                    <a href="#" class="top-link"><i class="fas fa-download"></i> <span>Results</span></a>
+                    <a href="#" class="top-link"><i class="fas fa-calendar-alt"></i> <span>Events</span></a>
+                    <a href="#" class="top-link"><i class="fas fa-newspaper"></i> <span>News</span></a>
+                    <a href="#" class="top-link"><i class="fas fa-briefcase"></i> <span>Placements</span></a>
+                    <a href="#" class="top-link"><i class="fas fa-book"></i> <span>Syllabus</span></a>
+                    <a href="#" class="top-link"><i class="fas fa-map"></i> <span>Campus Map</span></a>
+                    <a href="#" class="top-link"><i class="fas fa-phone-alt"></i> <span>Contact</span></a>
+                </div>
+                <div class="language-container">
+                    <button class="language-btn" id="languageBtn">
+                        <i class="fas fa-globe"></i> Language (50+)
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="#" class="language-option">English</a>
+                        <a href="#" class="language-option">Hindi</a>
+                        <a href="#" class="language-option">Spanish</a>
+                        <a href="#" class="language-option">French</a>
+                        <a href="#" class="language-option">German</a>
+                        <a href="#" class="language-option">Chinese</a>
+                        <a href="#" class="language-option">Japanese</a>
+                        <a href="#" class="language-option">Arabic</a>
+                        <a href="#" class="language-option">Russian</a>
+                        <a href="#" class="language-option">Portuguese</a>
+                        <a href="#" class="language-option">Italian</a>
+                        <a href="#" class="language-option">Korean</a>
+                        <a href="#" class="language-option">More Languages...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MAIN HEADER ========== -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center" style="padding-top: 10px;">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="Screenshot 2025-12-07 224009.png" alt="" style="width: 70px; height: 70px;">
+                    </div>
+                    <div class="logo-text" style="margin-right: 10px;">
+                        <h1>SRU Raipur</h1>
+                        <p>World-Class University</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-container d-none d-lg-block">
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" data-page="home">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item mega-dropdown">
+                            <a href="#" class="nav-link" data-page="about" id="aboutLink">
+                                <i class="fas fa-info-circle"></i> About
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div class="mega-menu" id="aboutMenu">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h5>University</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-bullseye"></i> Vision & Mission</a></li>
+                                            <li><a href="#"><i class="fas fa-user-tie"></i> Leadership</a></li>
+                                            <li><a href="#"><i class="fas fa-award"></i> Accreditations</a></li>
+                                            <li><a href="#"><i class="fas fa-chart-line"></i> Rankings</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h5>Campus</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-vr-cardboard"></i> Virtual Tour</a></li>
+                                            <li><a href="#"><i class="fas fa-building"></i> Facilities</a></li>
+                                            <li><a href="#"><i class="fas fa-leaf"></i> Sustainability</a></li>
+                                            <li><a href="#"><i class="fas fa-map"></i> Campus Map</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h5>Administration</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-landmark"></i> Governance</a></li>
+                                            <li><a href="#"><i class="fas fa-file-contract"></i> Policies</a></li>
+                                            <li><a href="#"><i class="fas fa-chart-bar"></i> Annual Report</a></li>
+                                            <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h5>Media</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-images"></i> Gallery</a></li>
+                                            <li><a href="#"><i class="fas fa-newspaper"></i> Newsroom</a></li>
+                                            <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                                            <li><a href="#"><i class="fas fa-book"></i> Publications</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-page="academics">
+                                <i class="fas fa-graduation-cap"></i> Academics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-page="admissions">
+                                <i class="fas fa-user-graduate"></i> Admissions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-page="placements">
+                                <i class="fas fa-briefcase"></i> Placements
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-page="contact">
+                                <i class="fas fa-phone-alt"></i> Contact
+                            </a>
+                        </li>
+                        <!-- RESOURCES ADDED AFTER CONTACT -->
+                        <li class="nav-item mega-dropdown">
+                            <a href="#" class="nav-link" id="resourcesLink">
+                                <i class="fas fa-toolbox"></i> Resources
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <div class="resources-mega-menu" id="resourcesMenu">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5><i class="fas fa-download"></i> Downloads</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-file-pdf"></i> Brochures</a></li>
+                                            <li><a href="#"><i class="fas fa-file-alt"></i> Forms</a></li>
+                                            <li><a href="#"><i class="fas fa-calendar"></i> Academic Calendar</a></li>
+                                            <li><a href="#"><i class="fas fa-book"></i> Syllabus</a></li>
+                                            <li><a href="#"><i class="fas fa-newspaper"></i> Newsletters</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5><i class="fas fa-cogs"></i> Services</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-wifi"></i> WiFi Services</a></li>
+                                            <li><a href="#"><i class="fas fa-print"></i> Printing</a></li>
+                                            <li><a href="#"><i class="fas fa-bus"></i> Transport</a></li>
+                                            <li><a href="#"><i class="fas fa-utensils"></i> Canteen</a></li>
+                                            <li><a href="#"><i class="fas fa-heartbeat"></i> Medical</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5><i class="fas fa-tools"></i> Tools</h5>
+                                        <ul class="mega-links">
+                                            <li><a href="#"><i class="fas fa-calculator"></i> GPA Calculator</a></li>
+                                            <li><a href="#"><i class="fas fa-search"></i> Faculty Search</a></li>
+                                            <li><a href="#"><i class="fas fa-map-marked-alt"></i> Room Finder</a></li>
+                                            <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                                            <li><a href="#"><i class="fas fa-headset"></i> Help Desk</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Settings Button instead of Search Box -->
+                    <div class="settings-container">
+                        <button class="settings-btn" id="settingsBtn">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <div class="settings-dropdown" id="settingsDropdown">
+                            <h5><i class="fas fa-sliders-h"></i> Quick Settings</h5>
+                            <div class="settings-options">
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Event Calendar</span>
+                                </a>
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-flask"></i>
+                                    <span>Research Portal</span>
+                                </a>
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Academics</span>
+                                </a>
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-building"></i>
+                                    <span>Campus Facilities</span>
+                                </a>
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-book"></i>
+                                    <span>Course Catalog</span>
+                                </a>
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-users"></i>
+                                    <span>Student Portal</span>
+                                </a>
+                                <a href="#" class="settings-option">
+                                    <i class="fas fa-download"></i>
+                                    <span>Downloads Forms</span>
+                                </a>
+                                <a href="#" class="settings-option" id="themeSettingsBtn">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Theme Settings</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="apply-btn">
+                        <i class="fas fa-rocket"></i> Apply Now
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== SIDE PANEL ========== -->
+    <div class="side-panel" id="sidePanel">
+        <div class="panel-header">
+            <h3><i class="fas fa-palette"></i> Theme Settings</h3>
+            <button class="close-panel" id="closePanel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="theme-options">
+            <h4><i class="fas fa-fill-drip"></i> Background Color</h4>
+            <div class="color-options">
+                <div class="color-option theme-light-blue active" data-color="#e3f2fd"></div>
+                <div class="color-option theme-light-gray" data-color="#f5f5f5"></div>
+                <div class="color-option theme-light-green" data-color="#e8f5e9"></div>
+                <div class="color-option theme-light-yellow" data-color="#fffde7"></div>
+                <div class="color-option theme-light-pink" data-color="#fce4ec"></div>
+                <div class="color-option theme-dark-blue" data-color="#0d1b2a"></div>
+                <div class="color-option theme-dark-gray" data-color="#1a1a1a"></div>
+                <div class="color-option theme-dark-green" data-color="#1b4332"></div>
+                <div class="color-option theme-warm" data-color="#fff3e0"></div>
+                <div class="color-option theme-cool" data-color="#e0f7fa"></div>
+            </div>
+
+            <h4 style="margin-top: 25px;"><i class="fas fa-paint-brush"></i> Quick Themes</h4>
+            <button class="theme-btn primary" id="defaultTheme">
+                <i class="fas fa-sun"></i> Default Theme
+            </button>
+            <button class="theme-btn warning" id="goldTheme">
+                <i class="fas fa-crown"></i> Gold Theme
+            </button>
+            <button class="theme-btn" id="darkTheme">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+            <button class="theme-btn" id="resetTheme">
+                <i class="fas fa-undo"></i> Reset
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== PAGES CONTAINER ========== -->
+    <div class="pages-container">
+
+        <!-- ========== HOME PAGE ========== -->
+        <div class="page active" id="home-page">
+            <!-- HERO SECTION -->
+            <section class="hero-section">
+                <div class="hero-shape"></div>
+                <div class="container">
+                    <div class="hero-content" style="padding-top: 40px;">
+                        <span class="hero-badge animate__animated animate__pulse animate__infinite">
+                            <i class="fas fa-star"></i> NAAC B12 Accredited
+                        </span>
+                        <h1 class="hero-title animate__animated animate__fadeInUp">
+                            World-Class Education <br>
+                            For <span>Global Leaders</span>
+                        </h1>
+                        <p class="hero-description animate__animated animate__fadeInUp animate__delay-1s">
+                            Join India's premier university offering cutting-edge programs,
+                            state-of-the-art research facilities, and unparalleled placement
+                            opportunities. Shape your future with SRU.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn-primary-hero animate__animated animate__fadeInLeft animate__delay-2s">
+                                <i class="fas fa-rocket"></i> Apply Now 2025
+                            </button>
+                            <button class="btn-secondary-hero animate__animated animate__fadeInRight animate__delay-2s">
+                                <i class="fas fa-play-circle"></i> Virtual Tour
+                            </button>
+                        </div>
+                        <div class="stats-container">
+                            <div class="row">
+                                <div class="col-md-3 col-6">
+                                    <div class="stat-item">
+                                        <span class="stat-number">95%</span>
+                                        <span class="stat-text">Placement Record</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="stat-item">
+                                        <span class="stat-number">200+</span>
+                                        <span class="stat-text">Recruiting Companies</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="stat-item">
+                                        <span class="stat-number">₹4L</span>
+                                        <span class="stat-text">Average Package</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="stat-item">
+                                        <span class="stat-number">₹8L</span>
+                                        <span class="stat-text">Highest Package</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="stat-item">
+                                        <span class="stat-number">100+</span>
+                                        <span class="stat-text">Programs Offered</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURES SECTION -->
+            <section class="features-section">
+                <div class="container">
+                    <h2 class="section-title">Why Choose <span style="color: #0d47a1;">SRU Raipur</span></h2>
+                    <p class="section-subtitle">
+                        Discover the unique advantages that make SRU Raipur the preferred choice
+                        for students across India and the world.
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-card animate__animated" id="feature1">
+                                <div class="feature-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h3>NAAC B12 Grade</h3>
+                                <p>Highest accreditation grade with 3.51 CGPA, recognized as Institution of Excellence.
+                                </p>
+                                <div class="feature-details" id="details1">
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> 3.51 CGPA Score</li>
+                                        <li><i class="fas fa-check-circle"></i> Institution of Excellence</li>
+                                        <li><i class="fas fa-check-circle"></i> UGC Recognized</li>
+                                        <li><i class="fas fa-check-circle"></i> 12-Year Accreditation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-card animate__animated" id="feature2">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe-americas"></i>
+                                </div>
+                                <h3>Global Exposure</h3>
+                                <p>200+ international collaborations, student exchange programs with top universities.
+                                </p>
+                                <div class="feature-details" id="details2">
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> 200+ International MoUs</li>
+                                        <li><i class="fas fa-check-circle"></i> Student Exchange Programs</li>
+                                        <li><i class="fas fa-check-circle"></i> Dual Degree Options</li>
+                                        <li><i class="fas fa-check-circle"></i> Global Internships</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-card animate__animated" id="feature3">
+                                <div class="feature-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h3>Advanced Research</h3>
+                                <p>₹50Cr+ research funding, 25 patents, 10 research centers with cutting-edge
+                                    facilities.</p>
+                                <div class="feature-details" id="details3">
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> ₹50Cr+ Research Funding</li>
+                                        <li><i class="fas fa-check-circle"></i> 25 Patents Filed</li>
+                                        <li><i class="fas fa-check-circle"></i> 10 Research Centers</li>
+                                        <li><i class="fas fa-check-circle"></i> Industry Collaboration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="feature-card animate__animated" id="feature4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <h3>Industry Connect</h3>
+                                <p>MoUs with Fortune 500 companies, incubation center supporting 50+ startups.</p>
+                                <div class="feature-details" id="details4">
+                                    <ul>
+                                        <li><i class="fas fa-check-circle"></i> Fortune 500 Companies</li>
+                                        <li><i class="fas fa-check-circle"></i> 50+ Startups Incubated</li>
+                                        <li><i class="fas fa-check-circle"></i> Live Projects</li>
+                                        <li><i class="fas fa-check-circle"></i> Industry Mentors</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ========== ABOUT PAGE ========== -->
+        <div class="page" id="about-page" style="padding-top: 50px;">
+            <div class="page-hero">
+                <div class="container">
+                    <h1>About SRU Raipur</h1>
+                    <p>Excellence in Education Since 2005</p>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="content-card">
+                        <h2><i class="fas fa-university"></i> Our University</h2>
+                        <p>Shri Rawatpura Sarkar University (SRU), Raipur is a premier institution of higher education
+                            established in 2005 under the Chhattisgarh Private Universities Act. With a sprawling
+                            50-acre campus, SRU offers world-class education across diverse disciplines.</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-bullseye"></i> Vision & Mission</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Vision</h4>
+                                <p>To be a globally recognized center of excellence in education, research, and
+                                    innovation that transforms students into socially responsible leaders and
+                                    change-makers.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Mission</h4>
+                                <p>To provide quality education through innovative teaching methods, cutting-edge
+                                    research, and industry partnerships that foster intellectual growth and professional
+                                    development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-award"></i> Accreditations & Rankings</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>NAAC A++</h4>
+                                <p>Highest accreditation with 3.51 CGPA</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h4>Ranked #1</h4>
+                                <p>In Chhattisgarh by Education World</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h4>Global Recognition</h4>
+                                <p>QS World University Rankings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== ACADEMICS PAGE ========== -->
+        <div class="page" id="academics-page" style="padding-top: 50px;">
+            <div class="page-hero">
+                <div class="container">
+                    <h1>Academics</h1>
+                    <p>60+ Programs Across Diverse Disciplines</p>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="content-card">
+                        <h2><i class="fas fa-graduation-cap"></i> Academic Programs</h2>
+                        <p>SRU offers comprehensive undergraduate, postgraduate, and doctoral programs designed to meet
+                            global standards and industry requirements.</p>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h4>Undergraduate Programs</h4>
+                                <ul class="program-list">
+                                    <li>B.Tech (Computer Science, Mechanical, Civil, EE, ECE)</li>
+                                    <li>BBA (Finance, Marketing, HR, International Business)</li>
+                                    <li>B.Sc (Physics, Chemistry, Mathematics, Biotechnology)</li>
+                                    <li>B.Com (Honors, Accounting, Finance)</li>
+                                    <li>BA (English, Economics, Political Science, Psychology)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Postgraduate Programs</h4>
+                                <ul class="program-list">
+                                    <li>M.Tech (Specializations in Emerging Technologies)</li>
+                                    <li>MBA (Finance, Marketing, HR, Operations, Analytics)</li>
+                                    <li>M.Sc (Computer Science, Data Science, Biotechnology)</li>
+                                    <li>M.Com (Advanced Accounting, Financial Analysis)</li>
+                                    <li>MA (English Literature, Economics, Sociology)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-flask"></i> Research & Innovation</h2>
+                        <p>Our research centers focus on cutting-edge technologies and sustainable solutions:</p>
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <h5>AI & Machine Learning Center</h5>
+                                <p>Advanced research in artificial intelligence, deep learning, and robotics.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Renewable Energy Lab</h5>
+                                <p>Research on solar, wind, and bio-energy solutions for sustainable future.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Biotechnology Research Center</h5>
+                                <p>Focus on healthcare, agriculture, and environmental biotechnology.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== ADMISSIONS PAGE ========== -->
+        <div class="page" id="admissions-page" style="padding-top: 50px;">
+            <div class="page-hero">
+                <div class="container">
+                    <h1>Admissions 2024</h1>
+                    <p>Open Now - Limited Seats Available</p>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="content-card">
+                        <h2><i class="fas fa-door-open"></i> Admission Process</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Step 1: Application</h4>
+                                <p>Fill online application form with required documents. Application fee: ₹1000</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Step 2: Entrance Test</h4>
+                                <p>Appear for SRU Entrance Exam (SRUEE) or submit valid national test scores.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Step 3: Interview</h4>
+                                <p>Personal interview for shortlisted candidates (online/offline options).</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Step 4: Admission</h4>
+                                <p>Fee payment and document verification for final admission.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-money-check-alt"></i> Fee Structure & Scholarships</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Fee Structure (Annual)</h4>
+                                <ul class="program-list">
+                                    <li>B.Tech: ₹1,25,000</li>
+                                    <li>MBA: ₹1,50,000</li>
+                                    <li>BBA: ₹75,000</li>
+                                    <li>M.Tech: ₹1,00,000</li>
+                                    <li>Other UG Programs: ₹50,000 - ₹80,000</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Scholarships Available</h4>
+                                <ul class="program-list">
+                                    <li>Merit Scholarship: Up to 100% tuition fee waiver</li>
+                                    <li>Sports Scholarship: Up to 50% fee waiver</li>
+                                    <li>Girl Child Scholarship: 25% fee waiver</li>
+                                    <li>Economically Weaker Section: Up to 75% waiver</li>
+                                    <li>Special Talent Scholarship: Case-by-case basis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-calendar-alt"></i> Important Dates</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="program-list">
+                                    <li>Application Start Date: <strong>15th January 2024</strong></li>
+                                    <li>Last Date for Application: <strong>30th April 2024</strong></li>
+                                    <li>Entrance Exam Date: <strong>15th May 2024</strong></li>
+                                    <li>Interview Dates: <strong>20th - 30th May 2024</strong></li>
+                                    <li>Result Declaration: <strong>5th June 2024</strong></li>
+                                    <li>Classes Commence: <strong>1st August 2024</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PLACEMENTS PAGE ========== -->
+        <div class="page" id="placements-page" style="padding-top: 50px;">
+            <div class="page-hero">
+                <div class="container">
+                    <h1>Placements</h1>
+                    <p>95% Placement Record with 200+ Recruiters</p>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="content-card">
+                        <h2><i class="fas fa-chart-line"></i> Placement Statistics 2023</h2>
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" style="color: var(--primary);">95%</span>
+                                    <span class="stat-text" style="color: #666;">Placement Rate</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" style="color: var(--primary);">₹28L</span>
+                                    <span class="stat-text" style="color: #666;">Highest Package</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" style="color: var(--primary);">₹8.5L</span>
+                                    <span class="stat-text" style="color: #666;">Average Package</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="stat-item">
+                                    <span class="stat-number" style="color: var(--primary);">200+</span>
+                                    <span class="stat-text" style="color: #666;">Recruiting Companies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-building"></i> Top Recruiters</h2>
+                        <div class="company-grid">
+                            <div class="company-logo">
+                                <i class="fab fa-google fa-2x" style="color: #DB4437;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fab fa-microsoft fa-2x" style="color: #00A4EF;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fab fa-amazon fa-2x" style="color: #FF9900;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fab fa-adobe fa-2x" style="color: #FF0000;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fab fa-apple fa-2x" style="color: #000;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fas fa-infinity fa-2x" style="color: #00B0F0;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fab fa-aws fa-2x" style="color: #FF9900;"></i>
+                            </div>
+                            <div class="company-logo">
+                                <i class="fas fa-briefcase fa-2x" style="color: #0F9D58;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h2><i class="fas fa-user-tie"></i> Placement Process</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5>Pre-Placement Training</h5>
+                                <p>200+ hours of training in aptitude, technical skills, communication, and interview
+                                    preparation.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Company Presentations</h5>
+                                <p>Interaction with recruiters through campus talks, pre-placement talks, and networking
+                                    sessions.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Placement Drives</h5>
+                                <p>On-campus and virtual placement drives with multiple rounds of selection process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== CONTACT PAGE ========== -->
+        <div class="page" id="contact-page" style="padding-top: 50px;">
+            <div class="page-hero">
+                <div class="container">
+                    <h1>Contact Us</h1>
+                    <p>We're Here to Help You</p>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="content-card">
+                                <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+                                <form class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="name">Full Name *</label>
+                                                <input type="text" id="name" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="email">Email Address *</label>
+                                                <input type="email" id="email" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="tel" id="phone" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="course">Course Interested</label>
+                                                <select id="course" class="form-control">
+                                                    <option value="">Select Course</option>
+                                                    <option value="btech">B.Tech</option>
+                                                    <option value="mba">MBA</option>
+                                                    <option value="bba">BBA</option>
+                                                    <option value="mtech">M.Tech</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Your Message *</label>
+                                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                                    </div>
+                                    <button type="submit" class="submit-btn">
+                                        <i class="fas fa-paper-plane"></i> Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="content-card">
+                                <h2><i class="fas fa-map-marker-alt"></i> Campus Address</h2>
+                                <div class="contact-info">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>SRU Raipur Campus</strong><br>
+                                        NH-43, Raipur-Kharora Road,<br>
+                                        Raipur, Chhattisgarh 492015
+                                    </div>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Phone</strong><br>
+                                        +91 771 123 4567<br>
+                                        Toll Free: 1800 123 4567
+                                    </div>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Email</strong><br>
+                                        info@sruraipur.ac.in<br>
+                                        admissions@sruraipur.ac.in
+                                    </div>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Office Hours</strong><br>
+                                        Mon-Fri: 9:00 AM - 5:00 PM<br>
+                                        Sat: 9:00 AM - 1:00 PM
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="main-footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="footer-logo">SRU</div>
+                    <h3 style="color: white; margin-bottom: 20px;">SRU Raipur</h3>
+                    <p class="footer-about">
+                        Shri Rawatpura Sarkar University, Raipur is a premier institution
+                        committed to excellence in education, research, and innovation.
+                        Recognized as a "University with Potential for Excellence" by UGC.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="nav-footer" data-page="home"><i class="fas fa-chevron-right"></i>
+                                Home</a></li>
+                        <li><a href="#" class="nav-footer" data-page="about"><i class="fas fa-chevron-right"></i> About
+                                Us</a></li>
+                        <li><a href="#" class="nav-footer" data-page="academics"><i class="fas fa-chevron-right"></i>
+                                Academics</a></li>
+                        <li><a href="#" class="nav-footer" data-page="admissions"><i class="fas fa-chevron-right"></i>
+                                Admissions</a></li>
+                        <li><a href="#" class="nav-footer" data-page="placements"><i class="fas fa-chevron-right"></i>
+                                Placements</a></li>
+                        <li><a href="#" class="nav-footer" data-page="contact"><i class="fas fa-chevron-right"></i>
+                                Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Important Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-download"></i> Download Results</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Course Syllabus</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Faculty Directory</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i> Placements</a></li>
+                        <li><a href="#"><i class="fas fa-phone-alt"></i> Contact Directory</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>SRU Raipur Campus</strong><br>
+                            NH-43, Raipur-Kharora Road,<br>
+                            Raipur, Chhattisgarh 492015
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +91 771 123 4567<br>
+                            Toll Free: 1800 123 4567
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@sruraipur.ac.in<br>
+                            admissions@sruraipur.ac.in
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">
+                            © 2024 Shri Rawatpura Sarkar University, Raipur. All Rights Reserved.<br>
+                            <a href="#" style="color: #90caf9;">Privacy Policy</a> |
+                            <a href="#" style="color: #90caf9;">Terms of Use</a> |
+                            <a href="#" style="color: #90caf9;">Sitemap</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-badges">
+                            <div class="badge"><i class="fas fa-award"></i></div>
+                            <div class="badge"><i class="fas fa-university"></i></div>
+                            <div class="badge"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="badge"><i class="fas fa-globe"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== CHAT BOAT ========== -->
+    <div class="chat-boat">
+        <button class="chat-btn" id="chatBtn">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div>
+                    <i class="fas fa-robot"></i> SRU Virtual Assistant
+                </div>
+                <button class="close-chat" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="message">
+                    <div class="bot-message">
+                        <strong>SRU Assistant:</strong> Hello! 👋<br>
+                        Welcome to Shri Rawatpura Sarkar University. How can I help you today?
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="bot-message">
+                        You can ask me about:<br>
+                        • Admissions process<br>
+                        • Courses & fees<br>
+                        • Placement statistics<br>
+                        • Campus facilities<br>
+                        • Scholarship details
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <textarea id="chatInput" placeholder="Type your message here..." rows="1"></textarea>
+                    <button class="send-btn" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ========== PRELOADER ==========
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('preloader').style.opacity = '0';
+                setTimeout(function () {
+                    document.getElementById('preloader').style.display = 'none';
+                }, 500);
+            }, 4000);
+        });
+
+        // ========== STICKY HEADER ==========
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // ========== LANGUAGE DROPDOWN ==========
+        const languageBtn = document.getElementById('languageBtn');
+        const languageDropdown = document.getElementById('languageDropdown');
+
+        languageBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!languageBtn.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageDropdown.classList.remove('show');
+            }
+        });
+
+        // ========== SETTINGS DROPDOWN ==========
+        const settingsBtn = document.getElementById('settingsBtn');
+        const settingsDropdown = document.getElementById('settingsDropdown');
+
+        settingsBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            settingsDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!settingsBtn.contains(e.target) && !settingsDropdown.contains(e.target)) {
+                settingsDropdown.classList.remove('show');
+            }
+        });
+
+        // ========== MEGA MENU ==========
+        const aboutLink = document.getElementById('aboutLink');
+        const aboutMenu = document.getElementById('aboutMenu');
+        const resourcesLink = document.getElementById('resourcesLink');
+        const resourcesMenu = document.getElementById('resourcesMenu');
+
+        aboutLink.addEventListener('mouseenter', function () {
+            aboutMenu.classList.add('show');
+        });
+
+        aboutLink.addEventListener('mouseleave', function () {
+            setTimeout(function () {
+                if (!aboutMenu.matches(':hover')) {
+                    aboutMenu.classList.remove('show');
+                }
+            }, 100);
+        });
+
+        aboutMenu.addEventListener('mouseleave', function () {
+            aboutMenu.classList.remove('show');
+        });
+
+        resourcesLink.addEventListener('mouseenter', function () {
+            resourcesMenu.classList.add('show');
+        });
+
+        resourcesLink.addEventListener('mouseleave', function () {
+            setTimeout(function () {
+                if (!resourcesMenu.matches(':hover')) {
+                    resourcesMenu.classList.remove('show');
+                }
+            }, 100);
+        });
+
+        resourcesMenu.addEventListener('mouseleave', function () {
+            resourcesMenu.classList.remove('show');
+        });
+
+        // ========== PAGE NAVIGATION ==========
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navFooterLinks = document.querySelectorAll('.nav-footer');
+        const pages = document.querySelectorAll('.page');
+
+        function showPage(pageId) {
+            // Hide all pages
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(pageId + '-page').classList.add('active');
+
+            // Update active nav link
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageId) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll to top smoothly
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Nav link click event
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const pageId = this.getAttribute('data-page');
+                if (pageId) {
+                    showPage(pageId);
+                }
+            });
+        });
+
+        // Footer nav link click event
+        navFooterLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const pageId = this.getAttribute('data-page');
+                if (pageId) {
+                    showPage(pageId);
+                }
+            });
+        });
+
+        // ========== WHY CHOOSE SRU INTERACTIVE ==========
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+            card.addEventListener('click', function () {
+                // Remove active class from all cards
+                featureCards.forEach(c => {
+                    c.classList.remove('active');
+                    const details = c.querySelector('.feature-details');
+                    if (details) details.classList.remove('show');
+                });
+
+                // Add active class to clicked card
+                this.classList.add('active');
+                const details = this.querySelector('.feature-details');
+                if (details) details.classList.add('show');
+            });
+        });
+
+        // ========== SIDE PANEL ==========
+        const themeSettingsBtn = document.getElementById('themeSettingsBtn');
+        const sidePanel = document.getElementById('sidePanel');
+        const closePanel = document.getElementById('closePanel');
+        const colorOptions = document.querySelectorAll('.color-option');
+        const defaultThemeBtn = document.getElementById('defaultTheme');
+        const goldThemeBtn = document.getElementById('goldTheme');
+        const darkThemeBtn = document.getElementById('darkTheme');
+        const resetThemeBtn = document.getElementById('resetTheme');
+
+        themeSettingsBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            settingsDropdown.classList.remove('show');
+            sidePanel.classList.add('open');
+        });
+
+        closePanel.addEventListener('click', function () {
+            sidePanel.classList.remove('open');
+        });
+
+        colorOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                // Remove active class from all options
+                colorOptions.forEach(o => o.classList.remove('active'));
+                // Add active class to clicked option
+                this.classList.add('active');
+
+                // Change background color
+                const color = this.getAttribute('data-color');
+                document.body.style.backgroundColor = color;
+
+                // Update CSS variable
+                document.documentElement.style.setProperty('--bg-color', color);
+
+                // Save to localStorage
+                localStorage.setItem('sru-theme-color', color);
+            });
+        });
+
+        defaultThemeBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = '#f8f9fa';
+            document.documentElement.style.setProperty('--bg-color', '#f8f9fa');
+            localStorage.setItem('sru-theme-color', '#f8f9fa');
+        });
+
+        goldThemeBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = '#fff3e0';
+            document.documentElement.style.setProperty('--bg-color', '#fff3e0');
+            localStorage.setItem('sru-theme-color', '#fff3e0');
+        });
+
+        darkThemeBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = '#1a1a1a';
+            document.documentElement.style.setProperty('--bg-color', '#1a1a1a');
+            localStorage.setItem('sru-theme-color', '#1a1a1a');
+        });
+
+        resetThemeBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = '#f8f9fa';
+            document.documentElement.style.setProperty('--bg-color', '#f8f9fa');
+            localStorage.removeItem('sru-theme-color');
+        });
+
+        // Load saved theme
+        const savedColor = localStorage.getItem('sru-theme-color');
+        if (savedColor) {
+            document.body.style.backgroundColor = savedColor;
+            document.documentElement.style.setProperty('--bg-color', savedColor);
+        }
+
+        // ========== CHAT FUNCTIONALITY ==========
+        const chatBtn = document.getElementById('chatBtn');
+        const chatWindow = document.getElementById('chatWindow');
+        const closeChat = document.getElementById('closeChat');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatBody = document.getElementById('chatBody');
+
+        chatBtn.addEventListener('click', function () {
+            chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+        });
+
+        closeChat.addEventListener('click', function () {
+            chatWindow.style.display = 'none';
+        });
+
+        // Auto-resize textarea
+        chatInput.addEventListener('input', function () {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+            if (this.scrollHeight > 100) {
+                this.style.overflowY = 'auto';
+            } else {
+                this.style.overflowY = 'hidden';
+            }
+        });
+
+        function addMessage(text, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = isUser ? 'user-message' : 'bot-message';
+            contentDiv.innerHTML = text;
+
+            messageDiv.appendChild(contentDiv);
+            chatBody.appendChild(messageDiv);
+
+            // Scroll to bottom
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        sendBtn.addEventListener('click', function () {
+            const message = chatInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                chatInput.value = '';
+                chatInput.style.height = 'auto';
+
+                // Simulate bot response
+                setTimeout(function () {
+                    const responses = [
+                        "Thank you for your query! Our team will contact you within 24 hours.",
+                        "For detailed course information, please visit our Academics page.",
+                        "Admissions are open for 2024 batch. Apply online or visit campus.",
+                        "SRU offers 60+ programs with 95% placement record.",
+                        "Campus tour can be scheduled every Monday to Saturday, 10 AM to 4 PM."
+                    ];
+
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addMessage(`<strong>SRU Assistant:</strong> ${randomResponse}`);
+                }, 1000);
+            }
+        });
+
+        chatInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendBtn.click();
+            }
+        });
+
+        // ========== APPLY NOW BUTTON ==========
+        document.querySelectorAll('.apply-btn, .btn-primary-hero').forEach(btn => {
+            btn.addEventListener('click', function () {
+                showPage('admissions');
+            });
+        });
+
+        // ========== CONTACT FORM SUBMIT ==========
+        document.querySelector('.contact-form')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+
+        // ========== ANIMATIONS ON SCROLL ==========
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // ========== RESPONSIVE MOBILE MENU ==========
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', function () {
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '100%';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.background = 'white';
+                navMenu.style.padding = '15px';
+                navMenu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+                navMenu.style.zIndex = '1000';
+                navMenu.style.gap = '8px';
+                navMenu.style.borderRadius = '0 0 15px 15px';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target) && window.innerWidth < 992) {
+                navMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
